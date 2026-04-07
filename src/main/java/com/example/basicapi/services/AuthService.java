@@ -1,6 +1,5 @@
 package com.example.basicapi.services;
 
-import com.example.basicapi.controller.AuthController;
 import com.example.basicapi.dtos.auth.AuthRequestDTO;
 import com.example.basicapi.dtos.auth.AuthResponseDTO;
 import com.example.basicapi.dtos.users.RegisterUserResponseDTO;

@@ -19,4 +19,12 @@ public class JwtService {
                 .withExpiresAt(new Date(System.currentTimeMillis() + JWT_EXPIRES))
                 .sign(Algorithm.HMAC256(JWT_SECRET));
     }
+
+    public Long getUserIdFromToken(String token) {
+        return JWT.require(Algorithm.HMAC256(JWT_SECRET))
+                .build()
+                .verify(token)
+                .getClaim("id")
+                .asLong();
+    }
 }
